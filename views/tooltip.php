@@ -1,0 +1,1 @@
+<button type="button" class="tooltip-button" data-toggle="tooltip" data-placement="right" title="Allowed characters: 0-9 aA-zZ "><? the_icon('tooltip') ?></button>

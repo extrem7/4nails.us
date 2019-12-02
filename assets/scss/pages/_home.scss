@@ -1,0 +1,47 @@
+.section-category {
+  .base-indent {
+    margin-bottom: 63px;
+  }
+  .category-carousel {
+    .owl-stage {
+      display: flex;
+    }
+    .owl-item {
+      &+.owl-item {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          height: 100%;
+          width: 1px;
+          background-color: #e0eae9;
+        }
+      }
+    }
+  }
+  .category-item {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    .four-title {
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+    &:hover {
+      .four-title {
+        color: $cyan;
+      }
+    }
+  }
+}
+
+.section-about {
+  .dynamic-content {
+    .alignleft,
+    .alignright {
+      margin-top: 0;
+    }
+  }
+}

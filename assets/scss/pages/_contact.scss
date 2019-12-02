@@ -1,0 +1,31 @@
+.contact-info {
+  a {
+    display: block;
+    font-size: rem(21px);
+    padding-left: 109px;
+  }
+  .text-right {
+    img {
+      margin-top: rem(19px);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-info {
+    a {
+      padding-left: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .contact-info {
+    margin-top: 1rem;
+    .text-right {
+
+    }
+  }
+  .contact-info a {
+    text-align: center;
+  }
+}

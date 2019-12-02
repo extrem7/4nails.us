@@ -1,0 +1,279 @@
+.cabinet-menu {
+  padding: 0;
+  max-width: 174px;
+  li {
+    a {
+      font-family: 'Cinzel', serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #01211d;
+      display: block;
+      padding: rem(4px) rem(12px);
+      &:hover {
+        background-color: $cyan;
+        color: #fff;
+      }
+    }
+    &.active {
+      a {
+        background-color: $cyan;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.cabinet {
+  padding-top: rem(43px);
+  .title.line {
+    border-bottom: 1px solid #bbcac8;
+    margin-bottom: 0.5rem;
+  }
+  .wishlist-list {
+    .product-card {
+      border: 0;
+    }
+  }
+}
+
+.cancel-order {
+  opacity: 0;
+  transition: all .2s ease-in-out!important;
+}
+
+.cabinet-orders {
+  color: #505958;
+  width: 100%;
+  font-size: 17px;
+  .mob-title {
+    display: block;
+  }
+  .status-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+  }
+  .btn-cyan-outline {
+    font-size: 0.875rem;
+    color: #01211d;
+    padding: 1px 11px;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .status {
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .sent {
+    .status {
+      background-color: #3dda78;
+    }
+  }
+  .accepted {
+    .status {
+      background-color: #e1c737;
+    }
+  }
+  .rejected {
+    .status {
+      background-color: #e55555;
+    }
+  }
+  thead,
+  tbody {
+    tr {
+      border-bottom: 1px solid #bbcac8;
+      cursor: pointer;
+      transition: background .2s ease-in-out;
+      &:hover {
+        background-color: #f6fbfa;
+        .cancel-order {
+          opacity: 1;
+        }
+      }
+    }
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+    a {
+      color: #09ccb4;
+      text-decoration: underline;
+    }
+    th {
+      color: #01211d;
+      text-align: center;
+      font-size: 21px;
+      font-weight: 400;
+    }
+  }
+}
+
+.order-detail {
+  margin-top: rem(30px);
+  thead,
+  tbody {
+    tr {
+      td {
+        &:nth-child(2) {
+          text-align: left;
+          width: 40%;
+        }
+      }
+    }
+  }
+  tfoot {
+    color: #01211d;
+    tr {
+      &:first-child {
+        td {
+          padding-top: 20px;
+        }
+      }
+    }
+    tr {
+      &:last-child {
+        td {
+          &:nth-child(2),
+          &:nth-child(3) {
+            background-color: #f6fbfa;
+          }
+        }
+      }
+      td {
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+.address-info {
+  .link {
+    margin-top: 2rem;
+    display: block;
+  }
+}
+
+.personal-info {
+  .subscribe-settings {
+    margin-top: rem(60px);
+    .form-group {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .order-detail {
+    .base-title {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .address-info {
+    > div {
+      &:first-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cabinet-orders th {
+    font-size: 16px;
+  }
+
+  .cabinet-orders {
+    font-size: 0.875rem;
+    .mob-title {
+      display: block;
+    }
+    tfoot {
+      tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    tbody,thead {
+      th {
+        display: none;
+      }
+      td {
+        padding: 4px;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      td.text-left {
+        text-align: center !important;
+      }
+    }
+    .status-box {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      .cancel-order {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .order-detail {
+    .small-size {
+      font-weight: 600;
+    }
+    tfoot {
+      tr {
+        td {
+          padding: 2px;
+        }
+        &:first-child {
+          td {
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .cabinet-menu  {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    li {
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+}

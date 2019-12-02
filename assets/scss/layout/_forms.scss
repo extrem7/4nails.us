@@ -1,0 +1,53 @@
+.login-form {
+  max-width: 272px;
+  width: 100%;
+  margin: rem(60px) auto;
+  .base-title {
+    margin-bottom: rem(17px);
+  }
+}
+
+.recovery-form {
+  max-width: 545px;
+  margin: rem(40px) auto;
+  text-align: center;
+  form {
+    margin-top: rem(29px);
+  }
+  input {
+    max-width: 272px;
+    margin: 0 auto;
+  }
+}
+
+.registration-form {
+  max-width: 566px;
+  margin-top: rem(50px);
+}
+
+.account-create {
+  margin-top: rem(60px);
+  .btn-cyan {
+    margin: rem(40px) 0 rem(32px) 0;
+  }
+}
+
+.email-checked {
+  margin-top: rem(48px);
+  img {
+    margin-bottom: rem(20px);
+  }
+}
+
+
+input+.show-pass.icon {
+  width: 22px;
+  height: 17px;
+  right: 8px;
+  background: url("../img/icons/psw_view.svg") no-repeat;
+  background-size: contain;
+  transition: background .2s ease-in-out;
+  &.active {
+    background: url("../img/icons/psw_hide.svg") no-repeat;
+  }
+}

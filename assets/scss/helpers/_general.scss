@@ -1,0 +1,360 @@
+.owl-theme .owl-dots .owl-dot span {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #bbcac8;
+  transition: background-color .3s ease-in-out;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: rem(25px);
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #09ccb4;
+}
+.owl-carousel .owl-nav {
+  /*position: absolute;
+  height: 70px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -1;*/
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  width: 47px;
+  height: 70px;
+  padding: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: background-color .2s ease-in-out;
+  span {
+    display: none;
+  }
+}
+.owl-theme .owl-nav button[class*=owl-]:hover {
+  background-color: #f3fbfa;
+  svg {
+    polygon {
+      fill: #09ccb4;
+    }
+  }
+}
+.owl-carousel .owl-nav button.owl-prev {
+  /*background: url("../img/icons/arrow_b_l.svg") no-repeat center;
+  background-size: 25px 48px;*/
+  left: -47px;
+}
+.owl-carousel .owl-nav button.owl-next {
+  /*background: url("../img/icons/arrow_b_r.svg") no-repeat center;
+  background-size: 25px 48px;*/
+  right: -47px;
+}
+
+.base-indent {
+  margin-top: rem(33px);
+}
+
+h1,h2,h3,h4,
+.title {
+  font-family: 'Cinzel', serif;
+  color: #01211d;
+  transition: color .3s ease-in-out;
+  font-weight: 400;
+  &.line {
+    border-bottom: 1px solid #27d2bd;
+    /*
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #27d2bd;
+    }*/
+  }
+}
+
+h1, .main-title {
+  font-size: rem(48px);
+}
+
+h2, .secondary-title {
+  font-size: rem(34px)
+}
+
+h3, .third-title {
+  font-size: rem(24px)
+}
+
+h4, .four-title {
+  font-size: rem(17px)
+}
+
+.base-title {
+  color: #01211d;
+  font-size: rem(21px);
+  font-weight: 400;
+}
+
+.small-size {
+  font-size: 0.875rem;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.title-shadow {
+  text-shadow: 0 1px 0 rgba(2, 2, 2, 0.3);
+}
+
+.cyan-color {
+  color: $cyan;
+}
+
+.white-color {
+  color: #fff!important;
+}
+
+.dynamic-content {
+  h2,h3,h4 {
+    margin: rem(25px) 0 rem(5px) 0;
+  }
+  .alignleft {
+    display: block;
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+  }
+  a {
+    color: $light-cyan;
+    text-decoration: underline;
+    &:hover {
+      color: $light-cyan;
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .alignright {
+    display: block;
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+  }
+  .aligncenter {
+    display: block;
+    margin: 1rem auto;
+  }
+  ul {
+    list-style: none;
+    li {
+      &:before {
+        content: "\2022";
+        color: $cyan;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-top: rem(20px);
+  .woocommerce-breadcrumb {
+    font-size: 0.875rem;
+    .breadcrumb-separator {
+
+    }
+    a {
+      color: #0fe0c7;
+      text-decoration: underline;
+    }
+  }
+}
+
+.pagination,
+.woocommerce-pagination {
+  display: flex;
+  justify-content: center;
+  .nav-links,
+  ul {
+    display: flex;
+    span,
+    a {
+      color: #505958;
+      font-family: 'Cinzel', serif;
+      font-size: 17px;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid $cyan;
+        background-color: $cyan;
+        color: #fff;
+      }
+    }
+    .current {
+      border: 1px solid $cyan;
+    }
+    .next {
+      transform: rotate(180deg);
+    }
+    .next, .prev {
+      &:hover {
+        border: 1px solid transparent;
+        background-color: transparent;
+        color: #505958;
+        polygon {
+          fill: $light-cyan;
+        }
+      }
+    }
+  }
+}
+
+.box-info {
+  background-color: #f6fafa;
+  box-shadow: 0 3px 9px rgba(2, 2, 2, 0.17);
+}
+
+.video-iframe {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.link {
+  color: $light-cyan;
+  text-decoration: underline;
+  &:hover {
+    color: $light-cyan;
+    text-decoration: none;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  .modal-cart {
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+    .product-thumbnail {
+      width: 84px;
+      height: 68px;
+      background-size: 100%;
+      background-position: center;
+    }
+  }
+  .modal-header {
+    border: 0;
+    padding: 5px 10px;
+  }
+  .close {
+    opacity: 1;
+    svg {
+      fill: #bbcac8;
+    }
+  }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 50;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  &.open-search {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+  h1, .main-title {
+    font-size: rem(38px);
+  }
+  h2, .secondary-title {
+    font-size: rem(28px)
+  }
+  h3, .third-title {
+    font-size: rem(20px)
+  }
+
+  .dynamic-content {
+    h2,h3,h4 {
+      margin: rem(25px) 0 rem(5px) 0;
+    }
+    .video-iframe {
+      margin: rem(20px) auto;
+    }
+    .alignleft,
+    .alignright {
+      display: block;
+      margin: 1rem auto;
+      float: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .breadcrumbs {
+    .woocommerce-breadcrumb {
+      white-space: nowrap;
+      overflow-x: scroll !important;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+  }
+
+  h1, .main-title {
+    font-size: rem(28px);
+  }
+  h2, .secondary-title {
+    font-size: rem(24px)
+  }
+  h3, .third-title {
+    font-size: rem(18px)
+  }
+  h4, .four-title {
+    font-size: rem(16px)
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    left: 0;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    .base-title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
