@@ -59,13 +59,13 @@
                         <? endwhile; ?>
                     </div>
                     <div class="d-flex align-items-center footer-contact">
-                        <div>
-                            <img src="<?= path() ?>assets/img/icons/call.svg" alt="call" class="mr-2">
-                            <a href="<?= tel(get_field('phone', 'option')) ?>"
+                        <!--<div>
+                            <img src="<?//= path() ?>assets/img/icons/call.svg" alt="call" class="mr-2">
+                            <a href="<?//= tel(get_field('phone', 'option')) ?>"
                                class="title-shadow white-color">
-                                <? the_field('phone', 'option') ?>
+                                <? //the_field('phone', 'option') ?>
                             </a>
-                        </div>
+                        </div>-->
                         <? $email = get_field('email', 'option') ?>
                         <div class="ml-4">
                             <img src="<?= path() ?>assets/img/icons/email.svg" alt="email" class="mr-2">

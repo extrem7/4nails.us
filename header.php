@@ -92,9 +92,9 @@
                    aria-label="logo"><? the_image('logo', 'logo', 'option') ?></a>
             <? endif; ?>
             <? get_search_form() ?>
-            <div class="phone-box"><a href="<?= tel(get_field('phone', 'option')) ?>"> <img
-                            src="<?= path() ?>assets/img/icons/call.svg" alt="call"
-                            class="mr-2"> <? the_field('phone', 'option') ?>                </a></div>
+            <!--<div class="phone-box"><a href="<?//= //tel(get_field('phone', 'option')) ?>"> <img
+                            src="<?//= //path() ?>assets/img/icons/call.svg" alt="call"
+                            class="mr-2"> <? //the_field('phone', 'option') ?>                </a></div>-->
             <div class="shop-info">
                 <div class="item">
                     <button class="icon" id="search-btn"><img src="<?= path() ?>assets/img/icons/search.svg"
