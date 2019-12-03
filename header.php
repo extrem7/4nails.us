@@ -126,9 +126,9 @@
                 <div class="shop-info"><a href="<? wishlist_url() ?>"
                                           class="item"><? the_icon('heart_b') ?></a> <? nails()->views()->miniCart() ?>
                 </div>
-                <div class="phone-box"><a href="<?= tel(get_field('phone', 'option')) ?>"> <img
-                                data-src="<?= path() ?>assets/img/icons/call.svg" alt="call"
-                                class="mr-2"> <? the_field('phone', 'option') ?></a></div>
+                <!--<div class="phone-box"><a href="<?//= tel(get_field('phone', 'option')) ?>"> <img
+                                data-src="<?//= path() ?>assets/img/icons/call.svg" alt="call"
+                                class="mr-2"> <? //the_field('phone', 'option') ?></a></div>-->
             </div>
         </div>
     </div>
