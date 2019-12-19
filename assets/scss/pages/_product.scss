@@ -6,6 +6,12 @@
     color: #01211d;
     background-color: transparent;
     border: 1px solid #bbcac8;
+    &.in-stock {
+      color: #7ad03a;
+    }
+    &.out-of-stock {
+      color: #a44;
+    }
   }
 
   .product-info {
@@ -31,6 +37,7 @@
   .box-info {
     padding: 20px 12px;
     max-width: 468px;
+    width: 100%;
   }
 
   .product-name {
@@ -50,6 +57,9 @@
     font-size: 21px;
     color: #01211d;
     font-weight: 400;
+    position: relative;
+    margin: 0 auto;
+    width: 174px;
 
     .wishlist {
       margin-left: rem(12px);
@@ -61,7 +71,7 @@
   }
 
   .quantity {
-    margin: rem(50px) 0;
+    margin: rem(40px) 0;
   }
 
   .rate {
@@ -76,7 +86,19 @@
     margin-top: rem(50px);
     display: flex;
     align-items: center;
-    a {
+    position: relative;
+    .toast {
+      position: absolute;
+      width: 100%;
+      right: 0;
+      z-index: 99;
+      top: 100%;
+      min-width: 300px;
+      background-clip: border-box;
+      border-bottom: 0;
+    }
+    .copy-link {
+      cursor: pointer;
       svg {
         width: 34px;
         height: 34px;
@@ -116,14 +138,15 @@
     }
 
     .thumbnails {
-      max-width: 286px;
+      width: 100%;
       .owl-nav {
         z-index: -1;
       }
       .thumbnail {
-        width: 88px;
+        width: 85px;
         height: 88px;
         border: 1px solid #deeae8;
+        margin: 0 auto;
         background: no-repeat center;
         cursor: pointer;
         transition: opacity .2s, border .2s;
@@ -150,7 +173,7 @@
     a {
       display: block;
       padding: 0.2rem rem(22px);
-      border: 1px solid transparent;
+      border: 1px solid $light-cyan;
       transition: background-color .3s ease-in-out;
       &:hover {
         background-color: $light-cyan;
@@ -160,7 +183,10 @@
       }
       &.active {
         border: 1px solid $light-cyan;
-        border-bottom: 1px solid #fff;
+        background-color: $light-cyan;
+        .title {
+          color: #fff;
+        }
       }
     }
   }
@@ -232,7 +258,7 @@
     background-color: transparent;
     border: 0;
     pointer-events: none;
-    height: 22px;
+    height: 36px;
     width: 40px;
     text-align: center;
     margin: 0 1px;
@@ -286,6 +312,70 @@
   }
 }
 
+.box-variation {
+  margin-top: 20px;
+  max-width: 468px;
+}
+
+.variation-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .item {
+    width: 58px;
+    height: 58px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    position: relative;
+    input {
+      display: none;
+      &:checked + label {
+        box-shadow: inset 0 0 0 2px $cyan;
+      }
+    }
+    label {
+      cursor: pointer;
+      display: block;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-size: 50px;
+      background-position: center;
+      box-shadow: inset 0 0 0 1px #ccc;
+      transition: box-shadow .2s ease-in-out;
+      margin: 0;
+    }
+    &:hover {
+      label {
+        box-shadow: inset 0 0 0 2px $cyan;
+      }
+    }
+    &.disabled {
+      label {
+        opacity: 0.3;
+      }
+      &:hover {
+        label {
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .product-info .box-info {
+    min-height: 432px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .product-gallery .gallery .thumbnails {
+    width: 80%;
+  }
+}
+
 @media (max-width: 992px) {
 
   .product {
@@ -319,13 +409,20 @@
     margin: 20px auto;
   }
 
-  
+  .product-info .product-share .toast {
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
 }
 
 @media (max-width: 768px) {
   .comment {
     display: flex;
     flex-direction: column;
+  }
+
+  .product-gallery .gallery .thumbnails {
+    width: 100%;
   }
 }
 

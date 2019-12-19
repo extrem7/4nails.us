@@ -52,7 +52,26 @@
   max-width: 174px;
   width: 100%;
 }
+.select2-container--default .select2-selection--single {
+  border: 0.063rem solid #bbcac8!important;
+  background-color: transparent!important;
+  color: #505958!important;
+  border-radius: .213rem!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container .select2-selection--single {
+  height: 33px!important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
 
+}
+.select2-search__field {
+  border: 0.063rem solid #bbcac8!important;
+  border-radius: 0.213rem!important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .control-form {
   display: block;
   width: 100%;
@@ -95,7 +114,7 @@
   }
   .icon {
     position: absolute;
-    bottom: 8px;
+    top: 8px;
     right: 0;
     margin: auto;
     button {
@@ -104,13 +123,24 @@
       border: 0;
     }
   }
+  .show-pass.icon {
+    width: 22px;
+    height: 17px;
+    right: 8px;
+    background: url("../img/icons/psw_view.svg") no-repeat;
+    background-size: contain;
+    transition: background .2s ease-in-out;
+    &.active {
+      background: url("../img/icons/psw_hide.svg") no-repeat;
+    }
+  }
 }
 
 .box-tooltip {
   position: relative;
   .tooltip-button {
     right: -28px;
-    bottom: 4px;
+    top: 28px;
   }
 }
 
@@ -118,35 +148,6 @@ button.icon {
   padding: 0;
   background-color: transparent;
   border: 0;
-}
-
-.search-input {
-  display: flex;
-  align-items: center;
-  .control-form {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0;
-    height: 36px;
-  }
-  .btn-search {
-    border-radius: 0 0.313rem 0.313rem 0;
-    min-width: 36px;
-    max-width: 36px;
-    line-height: 35px;
-    height: 36px;
-    background-color: #eba628;
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.label {
-  color: #504c4c;
-  font-weight: 400;
-  font-size: 1rem;
-  margin-bottom: 0;
 }
 
 .custom-select {
@@ -210,6 +211,11 @@ label {
   }
 }
 
+.custom-select {
+  background-image: url("../img/icons/arrow_dwn.svg");
+}
+
+
 .tooltip .tooltip-inner {
   padding: 0.4rem;
   display: flex;
@@ -230,6 +236,12 @@ label {
 }
 .bs-tooltip-left .arrow:before  {
   border-left-color: #fff;
+}
+
+.cart.disabled button,
+.button.disabled, .button:disabled {
+  opacity: .15;
+  pointer-events: none;
 }
 
 //checked
@@ -267,6 +279,12 @@ label {
   background-size: 14px 9px;
   box-shadow: none!important;
 }
+
+.custom-control-input:checked~.custom-control-label:before {
+  border-color: $cyan;
+  background-color: $cyan;
+}
+
 @media (max-width: 768px) {
   .button {
     &.btn-lg {
@@ -274,11 +292,11 @@ label {
     }
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .box-tooltip {
     .tooltip-button {
-      right: 0;
-      bottom: 35px;
+      right: -7px;
+      top: -1px;
     }
   }
 }

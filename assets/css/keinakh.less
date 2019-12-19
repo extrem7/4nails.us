@@ -1,88 +1,133 @@
 @import "../node_modules/select2/dist/css/select2.min.css";
+
 .tinvwl-shortcode-add-to-cart {
   display: inline-block;
+
+  .tinvwl-icon-heart {
+    width: 15px !important;
+    height: 21px !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 0 !important;
+
+    &:before {
+      color: rgb(23, 207, 185);
+    }
+  }
 }
-.tinvwl-shortcode-add-to-cart .tinvwl-icon-heart {
-  width: 15px !important;
-  height: 21px !important;
-  position: absolute !important;
-  right: 10px !important;
-  top: 0 !important;
+
+.page-template-cart .shop_table .photo {
+  background-size: 100%;
 }
-.tinvwl-shortcode-add-to-cart .tinvwl-icon-heart:before {
-  color: #17cfb9;
+
+.personal-info, .woocommerce-checkout {
+  .form-row {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+
+    .form-control {
+      //  font-weight: 300;
+    }
+  }
 }
-.personal-info .form-row {
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
-}
+
 .woocommerce-input-wrapper {
   display: block;
 }
-.mini-cart:hover .cart-mini {
-  opacity: 1;
-  visibility: visible;
+
+.mini-cart:hover {
+  .cart-mini {
+    opacity: 1;
+    visibility: visible;
+  }
 }
+
 .added_to_cart {
   display: none;
 }
-.stars a {
-  font-size: 0;
+
+.stars {
+  a {
+    font-size: 0;
+
+    &:hover ~ a::before {
+      font-weight: 300;
+    }
+  }
+
+  &:hover a::before {
+    font-weight: 700;
+  }
+
+  &.selected {
+    a.active {
+      &::before {
+        font-weight: 700;
+      }
+
+      ~ a::before {
+        font-weight: 300;
+      }
+    }
+
+    a:not( .active )::before {
+      font-weight: 700;
+    }
+  }
 }
-.stars a:hover ~ a::before {
-  font-weight: 300;
-}
-.stars:hover a::before {
-  font-weight: 700;
-}
-.stars.selected a.active::before {
-  font-weight: 700;
-}
-.stars.selected a.active ~ a::before {
-  font-weight: 300;
-}
-.stars.selected a:not( .active )::before {
-  font-weight: 700;
-}
+
 @font-face {
   font-family: 'WooCommerce';
   src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot');
-  src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'), url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff') format('woff'), url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf') format('truetype'), url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce') format('svg');
+  src: url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff') format('woff'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf') format('truetype'),
+  url('../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 @-webkit-keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
-.blockOverlay:before {
-  height: 1em;
-  width: 1em;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -0.5em;
-  margin-top: -0.5em;
-  content: '';
-  -webkit-animation: spin 1s ease-in-out infinite;
-  animation: spin 1s ease-in-out infinite;
-  background: url(/wp-content/plugins/woocommerce/assets/images/icons/loader.svg) center center;
-  background-size: cover;
-  line-height: 1;
-  text-align: center;
-  font-size: 2em;
-  color: rgba(0, 0, 0, 0.75);
+
+.blockOverlay {
+  &:before {
+    height: 1em;
+    width: 1em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -.5em;
+    margin-top: -.5em;
+    content: '';
+    -webkit-animation: spin 1s ease-in-out infinite;
+    animation: spin 1s ease-in-out infinite;
+    background: url(/wp-content/plugins/woocommerce/assets/images/icons/loader.svg) center center;
+    background-size: cover;
+    line-height: 1;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(0, 0, 0, .75);
+  }
 }
+
+.wpcf7-response-output{
+  display: none!important;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Cinzel';
@@ -91,6 +136,7 @@
   src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v8/8vIJ7ww63mVu7gt7-GT7LEc.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Cinzel';
@@ -99,6 +145,7 @@
   src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v8/8vIJ7ww63mVu7gt79mT7.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 /* cyrillic-ext */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -107,6 +154,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
+
 /* cyrillic */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -115,6 +163,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2) format('woff2');
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
+
 /* greek-ext */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -123,6 +172,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
+
 /* greek */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -131,6 +181,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2) format('woff2');
   unicode-range: U+0370-03FF;
 }
+
 /* vietnamese */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -139,6 +190,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
+
 /* latin-ext */
 @font-face {
   font-family: 'Source Sans Pro';
@@ -147,6 +199,7 @@
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
   font-family: 'Source Sans Pro';

@@ -1,7 +1,4 @@
 .header {
-  position: relative;
-  z-index: 100;
-
   .shop-info {
     display: flex;
     align-items: center;
@@ -63,6 +60,7 @@
       width: 0;
     }
   }
+
   .header-top {
     background-color: #f1faf9;
     font-size: 0.875rem;
@@ -78,14 +76,12 @@
   .header-middle {
     padding-bottom: rem(20px);
     padding-top: rem(20px);
-    transition: all .3s ease-in-out;
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     background-color: #fff;
-
   }
 
   .logo {
@@ -98,33 +94,37 @@
     border-right: 0;
     border-left: 0;
     background-color: #fff;
+    transition: box-shadow .3s;
     .shop-info {
       display: none;
     }
   }
 
   &.sticky-header {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.38);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1030;
-    .header-bottom {
-      border: 0;
-      .shop-info {
-        display: flex;
-        .item + .item {
-          margin-left: 0.5rem;
-        }
-      }
-    }
+    margin-top: 43px;
+    /*
     .header-middle,
     .header-top {
       visibility: hidden;
       padding: 0;
       height: 0;
       opacity: 0;
+    }
+    */
+    .header-bottom {
+      border: 0;
+      position: fixed;
+      top: 0;
+      z-index: 1030;
+      width: 100%;
+      left: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.38);
+      .shop-info {
+        display: flex;
+        .item + .item {
+          margin-left: 0.5rem;
+        }
+      }
     }
     .menu {
       li {
@@ -206,12 +206,11 @@
 }
 
 .banner {
-  height: 330px;
   margin-top: rem(22px);
   margin-bottom: 3rem;
   .banner-slider {
     .owl-item {
-      box-shadow: 0 0.188rem 0.438rem rgba(2, 2, 2, 0.2);
+      //box-shadow: 0 0.188rem 0.438rem rgba(2, 2, 2, 0.2);
     }
   }
 }
@@ -287,7 +286,7 @@
      font-size: 1.063rem;
      color: #01211d;
      font-weight: 400;
-     padding: 0 rem(40px);
+     padding: 0 rem(15px);
      text-shadow: 0 0.063rem 0 rgba(255, 255, 255, 0.8);
       &:focus,
       &:active,
@@ -314,13 +313,7 @@
 
 
 @media (max-width: 1200px) {
-  .menu {
-    li {
-      a {
-        padding: 0 1.5rem;
-      }
-    }
-  }
+
 }
 
 @media (max-width: 992px) {
@@ -382,6 +375,7 @@
 
     .header-top {
       font-size: 11px;
+      transition: all .2s ease-in-out;
     }
 
     .header-middle {
@@ -491,6 +485,13 @@
     }
 
     &.sticky-mob-header {
+      .header-middle {
+        padding-bottom: 3px;
+        padding-top: 3px;
+      }
+      .logo {
+        height: 40px;
+      }
       .header-top {
         height: 0;
         opacity: 0;
@@ -542,6 +543,14 @@
 
   .banner {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 423px) {
+  .header {
+    .menu-container {
+      top: 115px;
+    }
   }
 }
 

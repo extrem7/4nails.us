@@ -22,7 +22,7 @@
 
 .registration-form {
   max-width: 566px;
-  margin-top: rem(50px);
+  margin-top: 2.25rem;
 }
 
 .account-create {
@@ -39,15 +39,13 @@
   }
 }
 
-
-input+.show-pass.icon {
-  width: 22px;
-  height: 17px;
-  right: 8px;
-  background: url("../img/icons/psw_view.svg") no-repeat;
-  background-size: contain;
-  transition: background .2s ease-in-out;
-  &.active {
-    background: url("../img/icons/psw_hide.svg") no-repeat;
+@media (max-width: 767px) {
+  .registration-form {
+    margin-top: 0;
+  }
+  .login-form {
+    margin-bottom: 1rem;
   }
 }
+
+

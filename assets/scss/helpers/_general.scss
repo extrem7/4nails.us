@@ -1,3 +1,6 @@
+.cbalink {
+  display: none;
+}
 .owl-theme .owl-dots .owl-dot span {
   width: 0.75rem;
   height: 0.75rem;
@@ -56,7 +59,13 @@
   background-size: 25px 48px;*/
   right: -47px;
 }
-
+.owl-carousel .owl-stage {
+  display: flex;
+  font-size: 0;
+}
+.owl-carousel .item {
+  height: 100%;
+}
 .base-indent {
   margin-top: rem(33px);
 }
@@ -255,8 +264,9 @@ h4, .four-title {
     .product-thumbnail {
       width: 84px;
       height: 68px;
-      background-size: 100%;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   .modal-header {
@@ -288,8 +298,152 @@ h4, .four-title {
   }
 }
 
+.error404 {
+  .footer {
+    padding-top: 5rem;
+  }
+  .content {
+    img {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      left: 230px;
+      margin: auto;
+    }
+    .container {
+      min-height: 450px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+  }
+}
+
+.woocommerce-order-received {
+  .content {
+    position: relative;
+    padding-top: 0;
+    min-height: 530px;
+    .woocommerce,
+    .container {
+      height: 100%;
+      position: relative;
+    }
+    .row {
+      height: 100%;
+      align-items: center;
+    }
+  }
+  .footer {
+    padding-top: 0;
+  }
+  .thank-you-bg {
+    position: absolute;
+    bottom: -41px;
+    right: 160px;
+  }
+}
+
+.woocommerce-checkout {
+  main {
+    a {
+      color: $cyan;
+    }
+    .table {
+      color: #505958;
+    }
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top:-100px;
+
+  /* Styled to match the default WordPress screen reader text */
+  background-color: #f1f1f1;
+  -webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);
+  box-shadow:0 0 2px 2px rgba(0,0,0,.6);
+  color: #21759b;
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: auto;
+  left:6px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
+
+  -webkit-transition: top .75s ease-out;
+  transition: top .75s ease-out;
+}
+
+.skip-link:focus {
+  color: #21759b;
+  top: 7px;
+
+  -webkit-transition: top 0s;
+  transition: top 0s;
+}
+
+.icon_big_times::before {
+  content: '\f057'!important;
+  font-family: 'Font Awesome 5 Free'!important;
+  font-style: normal;
+}
+
+.icon_big_heart_check::before {
+  content: '\f004'!important;
+  font-family: 'Font Awesome 5 Free'!important;
+  font-weight: bold!important;
+  font-style: normal;
+  color: $cyan;
+}
+.ftinvwl-times:before {
+  content: '\f00d'!important;
+  font-style: normal;
+  font-weight: bold!important;
+  font-family: 'Font Awesome 5 Free'!important;
+}
+.ftinvwl-heart-o:before {
+  content: '\f004'!important;
+  font-style: normal;
+  font-family: 'Font Awesome 5 Free'!important;
+}
+
+.toast-header {
+  color: #ffffff;
+  background-color: rgb(19, 169, 151);
+  .close {
+    opacity: 1;
+    color: #fff;
+    }
+}
+
 @media (max-width: 1200px) {
 
+  .error404 .content .container {
+    min-height: 0;
+  }
+
+  .woocommerce-order-received .thank-you-bg {
+    right: 0;
+  }
+
+  .error404 .content img {
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .error404 .footer {
+    padding-top: 4rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -333,21 +487,60 @@ h4, .four-title {
   h1, .main-title {
     font-size: rem(28px);
   }
+
   h2, .secondary-title {
     font-size: rem(24px)
   }
+
   h3, .third-title {
     font-size: rem(18px)
   }
+
   h4, .four-title {
     font-size: rem(16px)
   }
   .owl-carousel .owl-nav button.owl-prev {
     left: 0;
   }
+
   .owl-carousel .owl-nav button.owl-next {
     right: 0;
   }
+
+  .woocommerce-order-received .content {
+    min-height: auto;
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  .woocommerce-order-received .content .row {
+    height: auto;
+  }
+
+  .woocommerce-order-received .thank-you-bg {
+    position: relative;
+    bottom: -42px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .error404 {
+    .base-title {
+      font-size: 1rem;
+    }
+  }
+
+  .pagination .nav-links span,
+  .pagination .nav-links a {
+    width: 32px;
+    height: 32px;
+  }
+
+  .owl-theme .owl-dots .owl-dot {
+    width: 48px;
+    height: 48px;
+  }
+
 }
 
 @media (max-width: 576px) {

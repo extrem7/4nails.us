@@ -4,7 +4,7 @@
   }
   .category-carousel {
     .owl-stage {
-      display: flex;
+      font-size: initial;
     }
     .owl-item {
       &+.owl-item {
@@ -25,6 +25,7 @@
     align-items: flex-end;
     justify-content: center;
     text-align: center;
+    padding: 0 20px;
     .four-title {
       font-weight: 400;
       margin-bottom: 18px;

@@ -1,6 +1,6 @@
 .page-template-cart {
 
-  .woocommerce {
+  .woocommerce-cart-form  {
     margin-bottom: rem(80px);
   }
 
@@ -78,14 +78,14 @@
       border: 1px solid #deeae8;
       background: no-repeat center;
       margin-right: 11px;
-      background-size: 100%;
+      background-size: 80%;
     }
   }
 }
 
 .subtotal {
   text-align: center;
-  margin-bottom: rem(40px);
+  margin-bottom: rem(20px);
   .price {
     font-weight: 600;
     font-size: rem(21px);
@@ -126,6 +126,7 @@
   right: 0;
   top: 100%;
   margin-top: 20px;
+  z-index: 20;
   color: #505958;
   &:before {
     content: '';
@@ -155,7 +156,7 @@
   .product-link {
     display: flex;
     align-items: center;
-    max-width: 150px;
+    max-width: 200px;
     width: 100%;
     color: #505958;
   }
@@ -166,12 +167,13 @@
     min-width: 47px;
     height: 47px;
     border: 1px solid #deeae8;
-    background-size: contain;
+    background: no-repeat center;
+    background-size: 80%;
   }
   .product-price,
   .product-name {
     font-size: 0.875rem;
-    margin-left: 5px;
+    margin-left: 15px;
     text-align: left;
   }
   .remove {
@@ -193,14 +195,6 @@
   }
 }
 
-.cart-link {
-  &:hover {
-    &+.cart-mini {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
 
 @media (max-width: 992px) {
   .page-template-cart .box-info {
@@ -209,8 +203,39 @@
 }
 
 @media (max-width: 768px) {
+
+
+  .cart-mini {
+    width: 270px;
+    min-width: 270px;
+    right: -63px;
+    &:before {
+      right: 57px;
+    }
+
+    .product-link {
+      max-width: 130px;
+      .photo {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
   .page-template-cart {
     .shop_table {
+      .quantity {
+        padding: 5px 0;
+      }
+      .product-remove {
+        a.remove {
+          padding: 4px 0;
+        }
+        .save {
+          padding: 10px 0;
+        }
+      }
       th {
         display: none;
       }
@@ -232,23 +257,6 @@
         &:first-child {
           border-top: 0;
         }
-      }
-    }
-  }
-
-  .cart-mini {
-    width: 270px;
-    min-width: 270px;
-    right: -63px;
-    &:before {
-      right: 57px;
-    }
-    .quantity {
-      display: none;
-    }
-    .product-link {
-      .photo {
-        display: none;
       }
     }
   }

@@ -1,5 +1,10 @@
 .footer {
   padding-top: 10rem;
+  .logo-footer img {width: 76px; height: 70px;}
+  .ajax-loader {
+    position: absolute;
+    bottom: 30px;
+  }
   .decorative {
     position: relative;
     &:after {
@@ -17,7 +22,7 @@
   }
   .copyright {
     font-size: 14px;
-    color: #b5bdbc;
+    color: #fff;
   }
   .footer-top {
     background-color: #f1faf9;
@@ -114,6 +119,7 @@
       }
     }
     .footer-top {
+      overflow: hidden;
       .subscribe-block {
         padding-top: 100px;
         &:before {
@@ -150,7 +156,21 @@
 }
 
 @media (max-width: 768px) {
+  .footer .footer-top ul li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
   .footer {
+    .row {
+      .four-title {
+        margin-top: 0.4rem;
+      }
+    }
+    .decorative {
+      &:after {
+        left: -20px;
+      }
+    }
     .footer-bottom {
       .footer-contact {
         font-size: 1rem;

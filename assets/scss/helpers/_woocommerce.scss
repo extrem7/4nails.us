@@ -29,7 +29,7 @@
     content: '';
     -webkit-animation: spin 1s ease-in-out infinite;
     animation: spin 1s ease-in-out infinite;
-    background: url('/../../../../plugins/woocommerce/assets/images/icons/loader.svg') center center;
+    background: url('../../../../plugins/woocommerce/assets/images/icons/loader.svg') center center;
     background-size: cover;
     line-height: 1;
     text-align: center;
@@ -82,10 +82,10 @@
 }
 
 .woocommerce-info {
-  border-top-color: #1e85be;
+  border-top-color: $cyan;
 
   &::before {
-    color: #1e85be;
+    color: $cyan;
   }
 }
 
@@ -225,6 +225,100 @@
       left: 50%;
       margin-left: -10px;
       margin-top: -10px;
+    }
+  }
+}
+
+
+.tinvwl-shortcode-add-to-cart {
+  display: inline-block;
+
+  .tinvwl_add_to_wishlist_button  {
+    width: 15px !important;
+    height: 21px !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 0 !important;
+
+    &:before {
+      content: '\f004'!important;
+      font-family: 'Font Awesome 5 Free'!important;
+      font-weight: 400!important;
+      color: $cyan;
+    }
+    &.tinvwl-product-in-list {
+      &:before {
+        font-weight: 900 !important;
+      }
+    }
+  }
+}
+
+.personal-info, .woocommerce-checkout {
+  .form-row {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.woocommerce-input-wrapper {
+  display: block;
+}
+
+.mini-cart:hover {
+  .cart-mini {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.added_to_cart {
+  display: none;
+}
+
+.stars {
+  a {
+    font-size: 0;
+
+    &:hover ~ a::before {
+      font-weight: 300;
+    }
+  }
+
+  &:hover a::before {
+    font-weight: 700;
+  }
+
+  &.selected {
+    a.active {
+      &::before {
+        font-weight: 700;
+      }
+
+      ~ a::before {
+        font-weight: 300;
+      }
+    }
+
+    a:not( .active )::before {
+      font-weight: 700;
+    }
+  }
+}
+
+.wpcf7-response-output{
+  display: none!important;
+}
+
+.woocommerce-message {
+  a.button.wc-forward {
+    text-shadow: none;
+    color: $light-cyan;
+    text-decoration: underline;
+    &:hover {
+      color: $light-cyan;
+      text-decoration: none;
     }
   }
 }
